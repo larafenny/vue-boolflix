@@ -26,11 +26,13 @@ export default {
         display: flex;
         align-items: center;
         background-color: #302e2e;
+        height: 60px;
 
         .logo{
         width: 10%;
         img{
             max-width: 100%;
+            padding: 0 10px;
         }
     }
     .menu{
@@ -38,7 +40,12 @@ export default {
         display: flex;
         justify-content: flex-end;
         .searchbar{
-            width: 30%;
+            width: 25%;
+            margin-right: 20px;
+            .search{
+                width: 100%;
+            }
+            
         }
     }
     }
