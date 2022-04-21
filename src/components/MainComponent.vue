@@ -1,6 +1,6 @@
 <template>
     <main>
-        <FilmList />
+        <FilmList :films="films"/>
         <SeriesList />
     </main>
 </template>
@@ -26,7 +26,6 @@ export default {
         background-color: rgb(34, 33, 32);
         width: 100vw;
         height: calc(100vh - 60px);
-        display: flex;
     }
 
 </style>
