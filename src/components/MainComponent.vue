@@ -7,6 +7,9 @@
 <script>
 export default {
     name: 'MainComponent',
+    props:{
+        films: Array
+    }
 }
 </script>
 
