@@ -1,16 +1,19 @@
 <template>
     <main>
         <FilmList />
+        <SeriesList />
     </main>
 </template>
 
 <script>
 import FilmList from './FilmList.vue'
+import SeriesList from './SeriesList.vue'
 
 export default {
     name: 'MainComponent',
     components:{
         FilmList,
+        SeriesList
     },
     props:{
         films: Array
