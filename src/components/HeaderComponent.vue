@@ -7,8 +7,11 @@
         <div class="menu">
             <div class="searchbar">
                 <input type="text" class="search" 
-                    @keyup.enter="cerca"
+                    v-model="searchFilm"
+                    @keyup.enter="search"
                     placeholder="Cerca">
+                    <button class="search-button" 
+                    @click="search">Cerca</button>
             </div>
         </div>
     </div>
@@ -17,6 +20,16 @@
 <script>
 export default {
     name: 'HeaderComponent',
+    data(){
+        return{
+            searchFilm:''
+        }
+    },
+    methods:{
+        search(){
+            this.$emit('search', this.searchFilm)
+        }
+    }
 
 }
 </script>
@@ -41,9 +54,17 @@ export default {
         justify-content: flex-end;
         .searchbar{
             width: 25%;
-            margin-right: 20px;
+            margin-right: 30px;
+            display: flex;
             .search{
-                width: 100%;
+                width: 80%;
+                margin-right: 5px;
+                border-radius: 3px;
+            }
+            button{
+                width: 20%;
+                border-radius: 3px;
+
             }
             
         }
