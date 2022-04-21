@@ -1,5 +1,17 @@
 <template>
-    <div>HEADER</div>
+    <div class="topHeader">
+        <div class="logo">
+            <img src="../assets/Netflix-logo.png" alt="logo">
+        </div>
+        
+        <div class="menu">
+            <div class="searchbar">
+                <input type="text" class="search" 
+                    @keyup.enter="cerca"
+                    placeholder="Cerca">
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -9,6 +21,26 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+    .topHeader{
+        display: flex;
+        align-items: center;
+        background-color: #302e2e;
 
+        .logo{
+        width: 10%;
+        img{
+            max-width: 100%;
+        }
+    }
+    .menu{
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+        .searchbar{
+            width: 30%;
+        }
+    }
+    }
+    
 </style>
