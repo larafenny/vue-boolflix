@@ -23,10 +23,21 @@ export default {
       apiUrl: 'https://api.themoviedb.org/3/search/',
       apiKey: 'd390a548a1b367f9298f733e846c5f99',
     }
-  }
+  },
   methods:{
     makeResearch(searchFilm){
-      console.log(searchFilm)
+      console.log(searchFilm);
+      const params = {
+        api_key: this.apiKey,
+        query: searchFilm,
+
+      }
+      axios.get(this.apiUrl + 'movie', {params}).then((response)=>{
+        console.log(response);
+      }).catch(error=>{
+        console.log(error)
+      });
+
     }
   }
 }
