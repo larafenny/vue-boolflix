@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HeaderComponent @search="makeResearch" />
-    <MainComponent :films="films" />
+    <MainComponent :films="films" :series="series" />
   </div>
 </template>
 
@@ -22,7 +22,8 @@ export default {
     return{
       apiUrl: 'https://api.themoviedb.org/3/search/',
       apiKey: 'd390a548a1b367f9298f733e846c5f99',
-      films: []
+      films: [],
+      series: []
     }
   },
   methods:{
@@ -40,8 +41,16 @@ export default {
         }
       }).catch(error=>{
         console.log(error)
-      });
+        });
 
+      axios.get(this.apiUrl + 'tv', {params}).then((response)=>{
+        console.log(response);
+        if (response.status === 200){
+          this.series = response.data.results
+        }
+      }).catch(error=>{
+        console.log(error)
+        });
     }
   }
 }
