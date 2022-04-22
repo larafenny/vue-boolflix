@@ -44,6 +44,40 @@ vote_count: (…)
 
 </script>
 
-<style>
+<style lang="scss" scoped>
+    .container{
+        color: rgb(124, 124, 124);
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            .card{
+                width: calc(100% / 6 - 10px);
+                border: solid 1px black;
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 0px 15px;
+                h1{
+                    font-size: 18px;
+                }
+                h2{
+                    font-size: 16px;
+                    
+                }
+                h3{
+                    font-size: 14px;
+                    text-align: right;
+                }
+                h4{
+                    font-size: 12px;
+                    text-align: right;
+                    align-self: flex-end;
 
-</style>
+                }
+            }
+
+        }
+    }
+</style>>
+
