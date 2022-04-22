@@ -18,10 +18,15 @@
 </template>
 
 <script>
+import FlagComponent from './FlagComponent.vue'
+
 export default {
     name: 'FilmList',
+    components: {
+        FlagComponent
+    },
     props: {
-        films: Array
+        films: Array,
     }
 
 }
@@ -38,7 +43,7 @@ vote_average: (…)
 
 <style lang="scss" scoped>
     .container{
-        color: rgb(124, 124, 124);
+        color: rgb(175, 168, 168);
         .row{
             display: flex;
             flex-wrap: wrap;
@@ -50,6 +55,9 @@ vote_average: (…)
                 flex-direction: column;
                 justify-content: space-evenly;
                 padding: 0px 15px;
+                background-color: rgb(45, 47, 49);
+                min-height: 200px;
+
                 h1{
                     font-size: 18px;
                 }
